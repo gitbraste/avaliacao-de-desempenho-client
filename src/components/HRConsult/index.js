@@ -18,7 +18,6 @@ export function HRConsult({ manager }) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectAssessment, setSelectAssessment] = useState([]);
 
-    const [isValid, setIsvalid] = useState(true);
     const [isFilterValid, setIsFilterValid] = useState(true);
     const [errorMensage, setErrorMensage] = useState("");
     const [showFilter, setShowFilter] = useState(false);

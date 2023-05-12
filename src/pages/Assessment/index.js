@@ -34,10 +34,15 @@ export function Assessment({ manager, selectEmployee }) {
 
   useEffect(() => {
     let result = (Object.values(scores)).reduce((acc, val) => acc + val, 0) / Object.keys(scores).length.toFixed(2);
-    { (result > 3 && result <= 4) && setResultValue("Acima do Esperado") }
-    { (result > 2 && result <= 3) && setResultValue("Atinge o Esperado") }
-    { (result > 1.5 && result <= 2) && setResultValue("Atinge Parcialmente o esperado") }
-    { (result <= 1.5) && setResultValue("Abaixo do Esperado") }
+    if (result > 3 && result <= 4) {
+      setResultValue("Acima do Esperado");
+    } else if (result > 2 && result <= 3) {
+      setResultValue("Atinge o Esperado");
+    } else if (result > 1.5 && result <= 2) {
+      setResultValue("Atinge Parcialmente o esperado");
+    } else {
+      setResultValue("Abaixo do Esperado");
+    }
   }, [scores]);
 
   const handleGetQuestion = () => {
