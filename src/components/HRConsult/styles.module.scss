@@ -1,0 +1,158 @@
+.content {
+    max-width: 1080px;
+    height: 100%;
+
+    margin: auto;
+}
+
+.content__userInfo {
+    width: 500px;
+
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__checkRegister {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        width: 500px;
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 2rem;
+                height: auto;
+                margin-left: 1rem;
+
+                transform-style: preserve-3d;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+
+            input {
+                width: 14rem;
+                height: 2rem;
+
+                border-radius: 10px;
+
+                margin-right: 1rem;
+                border: 2px solid #ccc;
+
+                padding: 0 0.3rem;
+            }
+
+            button {
+                padding: 0.4rem 1rem;
+                background: #fff;
+                color: #195BA2;
+
+                border: 2px solid #195BA2;
+                border-radius: 0.5rem;
+
+                transition: ease-in-out 0.5s;
+            }
+
+            button:hover {
+                background: #195BA2;
+                color: #fff
+            }
+        }
+    }
+}
+
+.content__select_manager_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        margin-top: 2rem;
+    }
+
+    .content__select_manager_info__filter_button, .content__select_manager_info__new_consult{
+        margin: 1rem;
+        padding: 0.2rem 2rem;
+    
+        border: 2px solid #ddd;
+        border-radius: 10px;
+    }
+}
+
+.content__filter {
+    width: 500px;
+
+    border-radius: 10px;
+    padding: 1rem;
+
+    select {
+        margin: 0.5rem 0 1rem 0;
+        background: #fff;
+
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .content__filter__insertDate {
+        display: flex;
+        margin-top: 0.5rem;
+
+        input {
+            padding: 0.5rem;
+            border-radius: 10px;
+        }
+
+        div+div {
+            margin-left: 1rem;
+        }
+
+        label {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            margin-left: 1rem;
+            width: 90px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.content__cardConsult {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 500px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.content__filter__alert_message {
+    margin: 1rem 0;
+    color: #810000;
+
+    text-align: center;
+}

@@ -1,0 +1,174 @@
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    max-width: 1080px;
+    height: 100%;
+
+    margin: auto;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.mainContent {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        color: #114072;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkRegister {
+    margin-top: 2rem;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    p {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        width: 14rem;
+        height: 2rem;
+
+        border-radius: 10px;
+
+        margin-right: 1rem;
+        border: 2px solid #ccc;
+
+        padding: 0 0.3rem;
+    }
+
+    button {
+        padding: 0.4rem 1rem; 
+        background: #fff;
+        color: #195BA2;
+
+        border: 2px solid #195BA2;
+        border-radius: 0.5rem;
+
+        transition: ease-in-out 0.5s;
+
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #195BA2;
+        color: #fff
+    }
+}
+
+.insertCodeField, .insertManagerField {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        text-align: center;
+    }
+}
+
+.insertManagerFieldContent {
+    display: flex;
+    align-items: center;
+    
+    img {
+        width: 2rem;
+        height: auto;
+        margin-left: 1rem;
+
+        transform-style: preserve-3d;
+        animation: spin 1s linear infinite;
+    }
+      
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.alertMessage {
+    margin: 1rem 0;
+    color: #810000;
+}
+
+.managerInfo {
+    margin: 2rem 0;
+}
+
+.userContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2rem;
+    width: 500px;
+}
+
+.userContent select {
+    width: 20rem;
+    height: 2rem;
+
+    margin-top: 1rem;
+
+    text-indent: 0.2rem;
+
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.userSummary {
+    margin: 1rem 0;
+
+    p{
+        margin: 0.1rem 0;
+    }
+}
+
+.startButton {
+    margin-top: 3rem;
+
+    button {
+        background:  #195BA2;
+        color: #fff;
+        padding: 0.5rem 3rem;
+        border-color: #195BA2;
+
+        border-radius: 5px;
+
+        transition: ease-in-out 0.5s;
+    }
+
+    button:hover {
+        background: #fff;
+        color: #195BA2;
+
+        border: 1px solid #195BA2;
+    }
+    
+}

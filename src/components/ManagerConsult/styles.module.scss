@@ -1,0 +1,81 @@
+.content {
+    max-width: 1080px;
+    height: 100%;
+
+    margin: auto;
+}
+
+.content__managerInfo {
+    width: 500px;
+
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__filter {
+    width: 500px;
+   
+    border-radius: 10px;
+    padding: 1rem;
+
+    select {
+        margin: 0.5rem 0 1rem 0;
+        background: #fff;
+
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .content__filter__insertDate {
+        display: flex;
+        margin-top: 0.5rem;
+
+        input {
+            padding: 0.5rem;
+            border-radius: 10px;
+        }
+
+        div + div{
+            margin-left: 1rem;
+        }
+
+        label {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            margin-left: 1rem;
+           width: 90px;
+           border-radius: 10px;
+        }
+    }
+}
+
+.filterButton {
+    margin: 1rem;
+    padding: 0.2rem 2rem;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.alert_message {
+    margin: 1rem 0;
+    color: #810000;
+
+    text-align: center;
+}
+
+.cardConsult {
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 500px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
