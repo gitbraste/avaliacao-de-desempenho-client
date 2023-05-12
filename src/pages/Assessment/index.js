@@ -56,24 +56,23 @@ export function Assessment({ manager, selectEmployee }) {
   const handleSaveAnswers = (id) => {
     let assessmentAnswers = [];
 
-    {
-      selectEmployee.type_user === 0 ?
-        StaffFormQuestions.forEach((element, i) => {
-          assessmentAnswers.push({
-            id_assessment: id,
-            id_question: element.id_question,
-            value: scores[element.title]
-          });
-        })
-        :
-        leaderFormQuestions.forEach((element, i) => {
-          assessmentAnswers.push({
-            id_assessment: id,
-            id_question: element.id_question,
-            value: scores[element.title]
-          });
-        })
-    };
+    if (selectEmployee.type_user === 0) {
+      StaffFormQuestions.forEach((element, i) => {
+        assessmentAnswers.push({
+          id_assessment: id,
+          id_question: element.id_question,
+          value: scores[element.title]
+        });
+      });
+    } else {
+      leaderFormQuestions.forEach((element, i) => {
+        assessmentAnswers.push({
+          id_assessment: id,
+          id_question: element.id_question,
+          value: scores[element.title]
+        });
+      });
+    }
 
     api.post(`/answer/create/`, assessmentAnswers);
 
@@ -86,26 +85,16 @@ export function Assessment({ manager, selectEmployee }) {
     setShowLoader(true);
     setShowMensageLowValue(false);
 
-    {
-      selectEmployee.type_user === 0 ?
-        StaffFormQuestions.forEach((question) => {
-          if ((scores[question.title] === 1 || scores[question.title] === 2) && !description) {
-            isValid = false;
-            setShowMensageLowValue(true);
-          } else if (!scores[question.title]) {
-            isValid = false;
-          }
-        })
-        :
-        leaderFormQuestions.forEach((question) => {
-          if ((scores[question.title] === 1 || scores[question.title] === 2) && !description) {
-            isValid = false;
-            setShowMensageLowValue(true);
-          } else if (!scores[question.title]) {
-            isValid = false;
-          }
-        })
-    }
+    const formQuestions = selectEmployee.type_user === 0 ? StaffFormQuestions : leaderFormQuestions;
+
+    formQuestions.forEach((question) => {
+      if ((scores[question.title] === 1 || scores[question.title] === 2) && !description) {
+        isValid = false;
+        setShowMensageLowValue(true);
+      } else if (!scores[question.title]) {
+        isValid = false;
+      }
+    });
 
     !isValid && setShowLoader(false);
 

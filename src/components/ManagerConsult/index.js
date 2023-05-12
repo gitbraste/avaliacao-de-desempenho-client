@@ -27,7 +27,7 @@ export function ManagerConsult({ manager, currentAssessment }) {
       .then((response) => {
         setEmployees(response.data);
       });
-  }, [currentAssessment]);
+  }, [manager, currentAssessment]);
 
   useEffect(() => {
     let result = 0;
@@ -51,12 +51,12 @@ export function ManagerConsult({ manager, currentAssessment }) {
     setModalIsOpen(false);
   };
 
-  const getEmployes = () => {
+  /* const getEmployes = () => {
     api.get(`/user/manager/${manager[0].register}`)
       .then((response) => {
         setEmployees(response.data);
       });
-  };
+  }; */
 
   const handleFilter = () => {
     setIsFilterValid(true);
