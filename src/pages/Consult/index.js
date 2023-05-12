@@ -25,7 +25,7 @@ export function Consult({ manager, onSetManager }) {
 
     useEffect(() => {
         onSetManager(() => [])
-    }, []);
+    }, [onSetManager]);
 
     const handleValidationCode = (e) => {
         setShowLoader(true);

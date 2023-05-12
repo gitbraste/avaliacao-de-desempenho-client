@@ -27,7 +27,7 @@ export function Register({ manager, onSetManager, selectEmployee, onSetSelectEmp
     useEffect(() => {
         onSetManager(() => []);
         onSetSelectEmployee(() => "");
-    }, []);
+    }, [onSetManager, onSetSelectEmployee]);
 
     const getManager = () => {
         setShowLoader(true);
@@ -87,7 +87,7 @@ export function Register({ manager, onSetManager, selectEmployee, onSetSelectEmp
     };
 
     const handleSelectEmployee = (id) => {
-        const employee = employees.find(employee => employee.register == id);
+        const employee = employees.find(employee => employee.register === id);
         setIsEmployeeSelected(false)
         onSetSelectEmployee(employee);
     };
@@ -100,20 +100,18 @@ export function Register({ manager, onSetManager, selectEmployee, onSetSelectEmp
     };
 
     const validation = () => {
-        {
-            selectEmployee === undefined || selectEmployee === "" ?
-                setIsEmployeeSelected(true)
-                :
-                api.get(`/user/manager/${selectEmployee.register}`)
-                    .then((response) => {
-                        if (response.data.length === 0) {
-                            onSetSelectEmployee(prevState => ({ ...prevState, type_user: 0 }));
-                        } else {
-                            onSetSelectEmployee(prevState => ({ ...prevState, type_user: 1 }));
-                        }
-                    });
-            navigate("/assessment")
+        if (selectEmployee === undefined || selectEmployee === "") {
+            setIsEmployeeSelected(true);
+        } else {
+            api.get(`/user/manager/${selectEmployee.register}`).then((response) => {
+              if (response.data.length === 0) {
+                onSetSelectEmployee((prevState) => ({ ...prevState, type_user: 0 }));
+              } else {
+                onSetSelectEmployee((prevState) => ({ ...prevState, type_user: 1 }));
+              }
+            });
         }
+        navigate("/assessment");          
     };
 
     return (

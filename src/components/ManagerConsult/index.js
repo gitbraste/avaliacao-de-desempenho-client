@@ -22,8 +22,12 @@ export function ManagerConsult({ manager, currentAssessment }) {
 
   useEffect(() => {
     setAssessment(currentAssessment);
-    getEmployes();
-  }, []);
+
+    api.get(`/user/manager/${manager[0].register}`)
+      .then((response) => {
+        setEmployees(response.data);
+      });
+  }, [currentAssessment]);
 
   useEffect(() => {
     let result = 0;
