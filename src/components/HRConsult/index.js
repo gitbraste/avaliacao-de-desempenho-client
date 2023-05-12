@@ -136,7 +136,6 @@ export function HRConsult({ manager }) {
                 setShowManagerField(false);
                 getEmployes();
             }).catch((error) => {
-                setIsvalid(false);
                 setShowLoader(false);
             })
     };
