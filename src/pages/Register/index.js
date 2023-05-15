@@ -27,7 +27,8 @@ export function Register({ manager, onSetManager, selectEmployee, onSetSelectEmp
     useEffect(() => {
         onSetManager(() => []);
         onSetSelectEmployee(() => "");
-    }, [onSetManager, onSetSelectEmployee]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const getManager = () => {
         setShowLoader(true);

@@ -24,8 +24,9 @@ export function Consult({ manager, onSetManager }) {
     const [inputCode, setInputCode] = useState("");
 
     useEffect(() => {
-        onSetManager(() => [])
-    }, [onSetManager]);
+        onSetManager(() => []);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleValidationCode = (e) => {
         setShowLoader(true);

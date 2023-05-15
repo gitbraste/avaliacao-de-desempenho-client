@@ -32,8 +32,9 @@ export function HRConsult({ manager }) {
             result += element.value;
             indice++;
         });
-        setResultValue((result / indice).toFixed(2))
-    }, [selectAssessment]);
+        setResultValue((result / indice).toFixed(2));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const setModalIsOpenToTrue = (id) => {
         setModalIsOpen(true);

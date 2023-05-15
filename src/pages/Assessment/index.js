@@ -30,7 +30,8 @@ export function Assessment({ manager, selectEmployee }) {
     if (manager.length === 0) {
       navigate("/");
     };
-  }, [manager, navigate]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     let result = (Object.values(scores)).reduce((acc, val) => acc + val, 0) / Object.keys(scores).length.toFixed(2);

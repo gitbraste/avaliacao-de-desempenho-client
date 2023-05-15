@@ -27,7 +27,8 @@ export function ManagerConsult({ manager, currentAssessment }) {
       .then((response) => {
         setEmployees(response.data);
       });
-  }, [manager, currentAssessment]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     let result = 0;
