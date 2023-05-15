@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'AvaliacaoDesempenhoCLI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F9385C22528347C8A5C4C572F806A3E3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C8EAB2543B17466A971D839494CA4B7A }}
           package: .
