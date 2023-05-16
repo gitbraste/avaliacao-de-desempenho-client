@@ -40,12 +40,12 @@ export function Consult({ manager, onSetManager }) {
         setShowLoader(false);
     }
 
-    const sendEmail = () => {
+    const sendEmail = (data) => {
         const code = Math.random().toString().slice(2, 8);
         setValidCode(code);
 
         const sendEmail = {
-            email: manager[0].email,
+            email: data[0].email,
             code: code
         };
 
@@ -62,7 +62,7 @@ export function Consult({ manager, onSetManager }) {
                     setShowManagerField(false);
                     setShowCodeField(true);
                     setShowLoader(false);
-                    sendEmail();
+                    sendEmail(data);
                 } else {
                     setThereIsEmployees(false);
                     setShowLoader(false);
@@ -83,7 +83,7 @@ export function Consult({ manager, onSetManager }) {
                     setShowLoader(false);
                 } else if (response.data[0].department === "21003") {
                     onSetManager(response.data)
-                    sendEmail();
+                    sendEmail(response.data);
                     setIsvalid(true);
                     setShowLoader(false);
                     setShowManagerField(false);
