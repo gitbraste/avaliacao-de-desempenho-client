@@ -1,0 +1,42 @@
+.container {
+    padding: 1rem 0;
+}
+
+.container__required_field {
+    color: #f00;
+}
+
+.content {
+    display: flex;
+    margin-top: 1rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & + div {
+            margin-left: 1rem;
+        }
+    }
+
+    input {
+        margin-right: 0.5rem;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.container__justification {
+    margin-top: 1.5rem;
+
+    textarea {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 0.5rem;
+
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        resize: none;
+    }
+}

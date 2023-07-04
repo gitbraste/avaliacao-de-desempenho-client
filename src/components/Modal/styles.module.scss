@@ -1,0 +1,93 @@
+.modal_content {
+    h2 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+}
+
+.modal_content_close_button {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+
+    button {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: #999;
+    }
+}
+
+.modal_content_close_button__validation {
+    button {
+        font-size: 1rem;
+        color: #195BA2;
+    }
+}
+
+.modal_content_close_button__validation_alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.modal_content__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2rem;
+
+    p {
+        margin-right: 1rem;
+    }
+}
+
+.modal_content__result {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 4rem;
+
+    button {
+        margin-top: 2rem;
+
+        color: #195BA2;
+        background: none;
+        border: none;
+
+        cursor: pointer;
+    }
+}
+
+.modal_content__card {
+    margin: 1rem 0;
+} 
+
+.modal_content__card__resultLabel {
+    margin-top: 1rem;
+    padding: 0.5rem;
+
+    background: #eef5fb;
+    border-radius: 5px;
+}
+
+.modal_content__result__label {
+    color: #195BA2;
+    font-size: 2rem;
+
+    margin-top: 1rem;
+
+    font-weight: bold;
+}

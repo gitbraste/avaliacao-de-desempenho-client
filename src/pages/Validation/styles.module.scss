@@ -1,0 +1,151 @@
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.container__logo {
+    padding: 1rem;
+
+    img  {
+        height: 3rem;
+        width: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            p {
+                color: #114072;
+            }
+
+            button {
+                border: none;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+
+.content {
+    max-width: 1080px;
+    height: 100%;
+
+    margin: auto;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+.mainContent {
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #195BA2;
+    }
+}
+
+.modal_content {
+    h2 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+}
+
+.modal_content__user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2rem;
+
+    p {
+        margin-right: 1rem;
+    }
+}
+
+.modal_content__result {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 2rem;
+
+    button {
+        margin-top: 2rem;
+
+        color: #195BA2;
+        background: none;
+        border: none;
+
+        cursor: pointer;
+    }
+}
+
+.modal_content__card {
+    margin: 1rem 0;
+} 
+
+.modal_content__card__resultLabel {
+    margin-top: 1rem;
+    padding: 0.5rem;
+
+    background: #eef5fb;
+    border-radius: 5px;
+}
+
+.modal_content__result__label {
+    color: #195BA2;
+    font-size: 2rem;
+
+    margin-top: 1rem;
+
+    font-weight: bold;
+}
+
+.main_content__message {
+    text-align: center;
+}
+
+.modal__details_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+        border: none;
+        color: #195BA2;
+    }
+}
+
+.main_content__validation_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    button {
+        border: none;
+        background: #195BA2;
+        color: #fff;
+        
+       
+        padding: 0.5rem 6rem;
+        border-radius: 10px;
+
+        &:hover {
+            background: #63a9f5;
+        }
+    }
+}

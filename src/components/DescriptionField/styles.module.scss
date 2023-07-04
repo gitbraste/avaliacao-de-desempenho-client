@@ -1,0 +1,20 @@
+.container {
+    margin-top: 2rem;
+    
+    textarea {
+        width: 100%;
+        height: 10rem;
+    
+        margin-top: 1.5rem;
+    
+        padding: 1rem;
+    
+        border-radius: 5px;
+    
+        resize: none;
+    }
+}
+
+.container__required_field {
+    color: #f00;
+}

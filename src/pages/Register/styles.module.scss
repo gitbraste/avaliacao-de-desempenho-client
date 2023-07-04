@@ -1,0 +1,138 @@
+.main_content {
+    h1 {
+        color: #114072;
+        text-align: center;
+    }
+}
+
+.main_content__select_type_assessment {
+    p {
+        margin: 3rem 0 1rem 0;
+    }
+
+    div {
+        border-radius: 4px;
+
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        width: 13rem;
+        padding: 1rem 0;
+
+        background: #007DC3;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+
+        text-align: center;
+        font-family: sans-serif;
+
+        cursor: pointer;
+
+        transition: all 0.3s;
+    }
+
+    label:hover {
+        background: #77AA7A;
+    }
+
+    input:checked+label {
+        background: #fff;
+        border: 1px solid #77AA7A;
+        color: #38793a;
+    }
+}
+
+.main_content__select_employee {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2rem;
+
+    select {
+        width: 20rem;
+        height: 2rem;
+
+        margin-top: 1rem;
+
+        text-indent: 0.2rem;
+
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 0.5rem;
+    }
+}
+
+.main_content__submit_button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 3rem;
+
+    button {
+        padding: 0.5rem 3rem;
+        margin-top: 2rem;
+
+        background: #195BA2;
+        color: #fff;
+        border: 2px solid #195BA2;
+
+        border-radius: 5px;
+
+        transition: ease-in-out 0.5s;
+
+        &:hover {
+            background: #fff;
+            color: #007ec1;
+
+            border: 2px solid #a7cbf1;
+        }
+    }
+}
+
+.main_content__loader_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+
+    img {
+        width: 5rem;
+        height: auto;
+        margin-left: 1rem;
+
+        transform-style: preserve-3d;
+        animation: spin 1s linear infinite;
+    }
+      
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .main_content {
+       padding: 1rem;
+    }
+    
+    .main_content__select_type_assessment {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+}

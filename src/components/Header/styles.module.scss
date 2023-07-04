@@ -1,0 +1,42 @@
+.container {
+    padding: 1rem;
+
+    img  {
+        height: 3rem;
+        width: auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            display: flex;
+            align-items: center;
+
+            p {
+                color: #114072;
+            }
+
+            button {
+                border: none;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .container img  {
+        height: 2rem;
+        width: auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .container img  {
+        height: 1.5rem;
+        width: auto;
+    }
+}

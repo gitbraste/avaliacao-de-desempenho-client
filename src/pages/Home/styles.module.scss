@@ -1,0 +1,42 @@
+.menu {
+    text-align: center;
+    margin-top: 1rem;
+
+    h1 {
+        color: #114072;
+    }
+}
+
+.menu__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3rem;
+
+    a {
+        width: 20rem;
+        padding: 0.6rem;    
+
+        color: #000;
+        
+        background: #007ec1;
+        color: #fff;
+
+        border: 2px solid #fff;
+        border-radius: 0.5rem;
+
+        transition: ease-in-out 0.5s;
+    }
+
+    a:hover {
+        background: #fff;
+        color: #007ec1;
+        border: 2px solid #a7cbf1;
+    }
+
+    a + a {
+        margin-top: 1rem;
+    }
+}

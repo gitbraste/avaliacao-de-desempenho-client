@@ -1,0 +1,116 @@
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+    width: 1080px;
+
+    h1 {
+        text-align: center;
+        color: #114072;
+    }
+}
+
+.mainContent__filters {
+    margin-top: 2rem;
+
+    display: flex;
+    gap: 1rem;
+}
+
+.mainContent__filters__item {
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    input,
+    select {
+        width: 15rem;
+        padding: 0.5rem;
+
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+    }
+}
+
+.mainContent__filter_button {
+    margin-top: 1rem;
+
+    button {
+        border: none;
+        color: #114072;
+    }
+}
+
+.mainContent__submit_button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+
+    button {
+        width: 30%;
+        padding: 0.5rem;
+
+        background: #007ec1;
+        color: #fff;
+
+        border: 2px solid #007ec1;
+        border-radius: 10px;
+
+        transition: ease-in-out 0.5s;
+    }
+
+    button:hover {
+        background: #fff;
+        color: #007ec1;
+        border: 2px solid #a7cbf1;
+    }
+}
+
+.mainContent__assessment_card {
+    width: 100%;
+
+    div {
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem 0;
+
+        border: 1px solid #ddd;
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        &:hover {
+            border-color: #007ec1;
+        }
+    }
+}
+
+.mainContent__assessment_card__valid {
+    color: #008f00;
+}
+
+.mainContent__assessment_card__invalid {
+    color: #ffbf00;
+}
+
+.mainContent__assessment_card__message {
+    text-align: center;
+
+    margin-top: 2rem;
+}
+
+@media (max-width: 1080px) {
+    .mainContent {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .mainContent {
+        width: 100%;
+    }
+}
