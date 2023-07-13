@@ -127,7 +127,7 @@ export function Consult({ manager, onSetManager }) {
                             <form onSubmit={(e) => handleValidationCode(e)}>
                                 <section className={style.checkRegister}>
                                     <div className={style.insertCodeField}>
-                                        <p>Ensira o codigo de verificação enviado para o seu email cadastrado</p>
+                                        <p>Insira o código de verificação enviado para o seu email cadastrado</p>
                                         <div className={style.checkRegister__content}>
                                             <input type="number" value={inputCode} onChange={(e) => setInputCode(e.target.value)} />
                                             <button>Buscar</button>
